@@ -1,0 +1,54 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.walletApp.app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.walletApp.app"
+        minSdk = 23
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+
+
+// Зависимости Firebase (нужно добавить их в блок dependencies)
+dependencies {
+    implementation 'com.google.firebase:firebase-analytics:21.0.0'  // Аналитика Firebase
+    implementation 'com.google.firebase:firebase-auth:21.0.1'  // Авторизация Firebase (если нужна)
+    implementation 'com.google.firebase:firebase-firestore:24.0.0'  // Firebase Firestore (если нужна)
+
+}
+
+// Подключаем плагин Google Services для Firebase
+apply plugin: 'com.google.gms.google-services'

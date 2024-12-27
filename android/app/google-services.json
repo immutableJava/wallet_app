@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "224145657542",
+    "firebase_url": "https://flutter-wallet-app-4e023-default-rtdb.firebaseio.com",
+    "project_id": "flutter-wallet-app-4e023",
+    "storage_bucket": "flutter-wallet-app-4e023.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224145657542:android:d250665768596f627bd1c7",
+        "android_client_info": {
+          "package_name": "com.walletApp.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224145657542-ess41veej5sel4ja3fandce69vlgjk8m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.walletApp.app",
+            "certificate_hash": "1216271dd8c9787441ee622dfa63af9811fd3934"
+          }
+        },
+        {
+          "client_id": "224145657542-nr1uqnh03q7cqs91v7936jpkrk3ooah5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlWtLwzNY41DVlr4_pC60k9hk4vsstX0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224145657542-nr1uqnh03q7cqs91v7936jpkrk3ooah5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "224145657542-5q520tp54js259laurk2s56vm5oo4ks3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.walletApp4e023"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

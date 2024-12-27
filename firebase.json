@@ -1,0 +1,71 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "flutter-wallet-app-4e023",
+          "appId": "1:224145657542:android:d250665768596f627bd1c7",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "flutter-wallet-app-4e023",
+          "appId": "1:224145657542:ios:cddd603b543f2b777bd1c7",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "flutter-wallet-app-4e023",
+          "appId": "1:224145657542:ios:a2a014c50a0ccf167bd1c7",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "flutter-wallet-app-4e023",
+          "configurations": {
+            "android": "1:224145657542:android:d250665768596f627bd1c7",
+            "ios": "1:224145657542:ios:cddd603b543f2b777bd1c7",
+            "macos": "1:224145657542:ios:a2a014c50a0ccf167bd1c7",
+            "web": "1:224145657542:web:ecc4ec7d20e4f59c7bd1c7",
+            "windows": "1:224145657542:web:f564f6e220d4e77a7bd1c7"
+          }
+        }
+      }
+    }
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "hosting": {
+      "port": 5005
+    },
+    "ui": {
+      "enabled": true,
+      "port": 1100
+    },
+    "singleProjectMode": true
+  }
+}
