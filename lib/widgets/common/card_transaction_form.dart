@@ -22,6 +22,30 @@ class _CardTransactionFormState extends ConsumerState<CardTransactionForm> {
   final _cardNumberController = TextEditingController();
   final _amountController = TextEditingController();
 
+  void showCustomBottomSheet(BuildContext context, String bottomText) {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) {
+        return Container(
+          height: 50,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 114, 0, 253),
+          ),
+          child: Center(
+            child: Text(
+              bottomText,
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyLarge!
+                  .copyWith(color: Colors.white),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   void _validateForm() {
     if (_formKey.currentState?.validate() ?? false) {
       String amount = _amountController.text;
@@ -30,27 +54,20 @@ class _CardTransactionFormState extends ConsumerState<CardTransactionForm> {
       double currentAmount = double.parse(amount);
 
       if (currentBalance < currentAmount) {
-        showModalBottomSheet(
-          context: context,
-          builder: (ctx) {
-            return Container(
-              height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 114, 0, 253),
-              ),
-              child: Center(
-                child: Text(
-                  'You have not enough amount',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge!
-                      .copyWith(color: Colors.white),
-                ),
-              ),
-            );
-          },
-        );
+        showCustomBottomSheet(context, 'You have not enough amount');
+        if (mounted) {
+          Future.delayed(Duration(seconds: 5), () {
+            Navigator.of(context).pop();
+          });
+        }
+        return;
+      }
+
+      developer.log(ref.read(cardNotifierProvider).cardNumber);
+      if (cardNumberText.replaceAll(' ', '') ==
+          ref.read(cardNotifierProvider).cardNumber) {
+        showCustomBottomSheet(
+            context, 'You cannot transfer money to your own account.');
         if (mounted) {
           Future.delayed(Duration(seconds: 5), () {
             Navigator.of(context).pop();

@@ -14,19 +14,20 @@ class _CardAddScreenState extends State<CardAddScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Center(
-          child: Column(
-            children: [
-              CardHeader('Add Card', false),
-              SizedBox(height: 12),
-              CardForm(),
-            ],
+        appBar: MainAppBar(),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(32),
+            child: Center(
+              child: Column(
+                children: [
+                  CardHeader('Add Card', false),
+                  SizedBox(height: 12),
+                  SingleChildScrollView(child: CardForm()),
+                ],
+              ),
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

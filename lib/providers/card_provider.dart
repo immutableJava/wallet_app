@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:wallet_app/models/bank_card.dart';
 import 'package:wallet_app/models/user.dart';
 import '../../data/firestore_service.dart';
-import 'dart:developer' as developer;
 
 class CardNotifier extends StateNotifier<BankCard> {
   CardNotifier() : super(BankCard());

@@ -5,7 +5,6 @@ import 'package:intl/intl.dart';
 import 'package:wallet_app/data/firestore_service.dart';
 import 'package:wallet_app/providers/card_provider.dart';
 import 'package:wallet_app/screens/card_detail.dart';
-import 'dart:developer' as developer;
 import '../../models/user.dart';
 import '../../screens/card_add.dart';
 

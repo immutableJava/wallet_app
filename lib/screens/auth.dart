@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../widgets/auth/auth_form.dart';
 import '../widgets/auth/auth_social.dart';
-import 'dart:developer' as developer;
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});

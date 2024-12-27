@@ -5,7 +5,6 @@ import 'package:wallet_app/data/firestore_service.dart';
 import 'package:wallet_app/models/user_transaction.dart';
 import 'package:wallet_app/models/bank_card.dart';
 import 'package:wallet_app/providers/card_provider.dart';
-import 'package:wallet_app/widgets/common/main_app_bar.dart';
 import 'package:wallet_app/widgets/home/wallet_transaction_list.dart';
 import '../models/user.dart';
 import '../widgets/home/wallet_card.dart';

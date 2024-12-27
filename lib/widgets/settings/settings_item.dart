@@ -8,7 +8,6 @@ import 'package:wallet_app/screens/profile.dart';
 import 'package:wallet_app/screens/support.dart';
 import 'package:wallet_app/screens/wallet.dart';
 import 'package:wallet_app/widgets/common/main_app_bar.dart';
-import 'package:wallet_app/widgets/home/wallet_card.dart';
 
 class SettingsItem extends ConsumerWidget {
   const SettingsItem(this.title, this.assetName, {super.key});

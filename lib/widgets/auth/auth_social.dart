@@ -8,7 +8,7 @@ import 'package:wallet_app/screens/wallet.dart';
 import 'package:wallet_app/widgets/home/wallet_card.dart';
 
 class AuthSocial extends StatefulWidget {
-  AuthSocial(this.toggleLogin, this.isLogin, {super.key});
+  const AuthSocial(this.toggleLogin, this.isLogin, {super.key});
 
   final bool isLogin;
 

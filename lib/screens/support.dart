@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:wallet_app/widgets/common/main_app_bar.dart';
 import 'package:wallet_app/widgets/support/support_social_network.dart';
 

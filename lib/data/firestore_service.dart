@@ -52,7 +52,7 @@ class FirestoreService {
       developer.log('loginUser Error: $e = $stackTrace',
           error: e, stackTrace: stackTrace);
       throw Exception(
-        'Login failed: ${e.message}',
+        'Login failed: ${e.message}, $stackTrace',
       );
     }
   }
